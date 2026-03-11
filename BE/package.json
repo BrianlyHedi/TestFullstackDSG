@@ -1,0 +1,34 @@
+{
+  "name": "be-produk",
+  "version": "1.0.0",
+  "description": "Backend API PT XYZ - Kendaraan Bekas (NestJS + Prisma + PostgreSQL)",
+  "private": true,
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.0",
+    "@nestjs/config": "^3.1.1",
+    "@nestjs/core": "^10.3.0",
+    "@nestjs/mapped-types": "^2.0.4",
+    "@nestjs/platform-express": "^10.3.0",
+    "@prisma/client": "^5.8.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "reflect-metadata": "^0.1.14",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.3.0",
+    "@nestjs/schematics": "^10.1.0",
+    "prisma": "^5.8.1",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}

@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model contains an expression index which requires additional setup for migrations. Visit https://pris.ly/d/expression-indexes for more info.
+model Produk {
+  id         Int      @id @default(autoincrement())
+  merek      String   @db.VarChar(100)
+  jenis      String   @db.VarChar(100)
+  stok       Int      @default(0)
+  harga      Decimal  @default(0) @db.Decimal(15, 2)
+  keterangan String?  @default("")
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt  DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  @@map("produk")
+}
